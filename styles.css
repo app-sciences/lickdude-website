@@ -1,0 +1,56 @@
+:root{--bg:#0e0b10;--panel:#1a151d;--text:#f4eef7;--muted:#a99fb0;--hot:#ff5a1f;--hot2:#ffb21f;--line:#2e2633;--good:#2ee59d;--bad:#ff3b3b}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+a{color:inherit}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:16px 24px;max-width:1100px;margin:auto}
+.nav nav{display:flex;gap:20px;align-items:center}
+.nav nav a{text-decoration:none;color:var(--muted)}
+.nav nav a.btn{color:#fff}
+.logo{font-weight:900;font-size:1.3rem;text-decoration:none}
+.logo span{color:var(--hot)}
+main{max-width:1100px;margin:auto;padding:0 24px}
+.hero{padding:80px 0 60px;text-align:center}
+.eyebrow{color:var(--hot2);text-transform:uppercase;letter-spacing:.12em;font-size:.8rem;font-weight:700;margin:0 0 12px}
+h1{font-size:clamp(2.6rem,8vw,5.5rem);line-height:1.02;margin:0 0 20px;font-weight:900}
+.hot{background:linear-gradient(90deg,var(--hot),var(--hot2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lede{max-width:620px;margin:0 auto 28px;color:var(--muted);font-size:1.15rem}
+.btn{display:inline-block;background:linear-gradient(90deg,var(--hot),var(--hot2));color:#1a0d05;font-weight:800;border:0;border-radius:999px;padding:14px 28px;font-size:1rem;cursor:pointer;text-decoration:none}
+.btn.small{padding:8px 18px;font-size:.9rem}
+.btn.ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
+.btn:hover{filter:brightness(1.1)}
+.btn:focus-visible,input:focus-visible{outline:3px solid var(--hot2);outline-offset:2px}
+.fine{color:var(--muted);font-size:.9rem;margin-top:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;padding:30px 0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:26px}
+.card h2{margin:8px 0;font-size:1.25rem}
+.card p{color:var(--muted);margin:0}
+.icon{font-size:2rem}
+.metro{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px;align-items:center;padding:70px 0}
+.metro h2,.cta h2{font-size:clamp(2rem,5vw,3rem);margin:0 0 12px}
+.metro p{color:var(--muted)}
+.aside{font-style:italic}
+.meter{--c:var(--good);background:var(--panel);border:1px solid var(--c);box-shadow:0 0 40px -12px var(--c);border-radius:22px;padding:28px;text-align:center;transition:border-color .4s,box-shadow .4s}
+.meter[data-state=sloppy]{--c:var(--bad)}
+.status{display:inline-flex;align-items:center;gap:8px;color:var(--c);font-weight:800;text-transform:uppercase;letter-spacing:.1em;font-size:.8rem;transition:color .4s}
+.status .dot{width:10px;height:10px;border-radius:50%;background:var(--c);transition:background .4s;animation:pulse 1s infinite}
+@keyframes pulse{50%{opacity:.35}}
+.bpm{font-size:4.5rem;font-weight:900;line-height:1.1;color:var(--c);transition:color .4s;font-variant-numeric:tabular-nums}
+.bpm small{font-size:1rem;color:var(--muted);margin-left:6px}
+.bar{height:12px;background:var(--line);border-radius:99px;overflow:hidden;margin:12px 0 18px}
+#fill{height:100%;width:25%;background:var(--c);transition:background .4s}
+.notes{display:flex;justify-content:center;gap:8px;height:16px;margin-bottom:18px}
+.notes span{width:14px;height:14px;border-radius:50%;animation:pop .25s}
+.notes .g{background:var(--good)}.notes .r{background:var(--bad)}
+@keyframes pop{from{transform:scale(.3);opacity:0}}
+.pend{position:relative;height:90px;width:120px;margin:0 auto}
+.pend b{position:absolute;bottom:0;left:0;right:0;height:10px;background:var(--line);border-radius:6px}
+.arm{position:absolute;bottom:8px;left:calc(50% - 2px);width:4px;height:80px;background:var(--text);border-radius:3px;transform-origin:50% 100%}
+.arm i{position:absolute;top:12px;left:-8px;width:20px;height:14px;background:var(--c);border-radius:3px;transition:background .4s}
+.msg{min-height:1.6em;margin:14px 0 0;color:var(--c)!important;font-weight:700;transition:color .4s}
+.cta{text-align:center;padding:60px 0 90px;border-top:1px solid var(--line)}
+.cta p{color:var(--muted)}
+form{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:20px}
+input{background:var(--panel);border:1px solid var(--line);color:var(--text);border-radius:999px;padding:14px 20px;font-size:1rem;min-width:260px}
+footer{text-align:center;color:var(--muted);padding:30px;font-size:.9rem;border-top:1px solid var(--line)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}#fill{transition:none}}

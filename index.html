@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lick Dude — Get clean, or else.</title>
+<meta name="description" content="Lick Dude is a guitar learning game. AI picks your lessons, and Genius Metronome listens to how clean you play and adjusts the tempo in real time.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎸</text></svg>">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="nav">
+  <a class="logo" href="#">Lick<span>Dude</span></a>
+  <nav>
+    <a href="#how">How it works</a>
+    <a href="#metronome">Genius Metronome</a>
+    <a href="#waitlist" class="btn small">Join waitlist</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Get clean,<br><span class="hot">or else.</span></h1>
+    <p class="lede">Lick Dude uses AI to pick exactly what you should practice next, then a metronome that actually listens speeds you up when you nail it. Sloppy playing has consequences.</p>
+    <a href="#waitlist" class="btn">Get early access</a>
+    <p class="fine">Coming soon. Be first in line.</p>
+  </section>
+
+  <section id="how" class="grid">
+    <article class="card">
+      <div class="icon">🧠</div>
+      <h2>Your AI lick dealer</h2>
+      <p>Quit scrolling tabs. It knows what you suck at and hands you the next lick to fix it.</p>
+    </article>
+    <article class="card">
+      <div class="icon">🎯</div>
+      <h2>Practice that doesn't suck</h2>
+      <p>Levels, streaks and a difficulty curve that stays just out of reach. Nail it, level up, go again.</p>
+    </article>
+    <article class="card">
+      <div class="icon">⚡</div>
+      <h2>It hears every note</h2>
+      <p>No waiting for a grade. It reacts mid-riff, not after the song.</p>
+    </article>
+  </section>
+
+  <section id="metronome" class="metro">
+    <div>
+      <p class="eyebrow">Our secret weapon</p>
+      <h2>Genius Metronome</h2>
+      <p>A metronome that hears you. Play cleanly and it nudges the tempo up. Play sloppily and it backs off, and judges you a little.</p>
+      <p class="aside">Yes, we know the real-time part is hard. That is exactly why we are building it.</p>
+    </div>
+    <div class="meter" id="meter" data-state="clean" role="img" aria-label="Animated demo: when you play cleanly the tempo speeds up, when you play sloppily it slows down">
+      <div class="status"><span class="dot"></span><span id="state">Playing clean</span></div>
+      <div class="bpm"><span id="bpm">80</span><small>BPM</small></div>
+      <div class="bar"><div id="fill"></div></div>
+      <div class="notes" id="notes" aria-hidden="true"></div>
+      <div class="pend" aria-hidden="true"><div class="arm" id="arm"><i></i></div><b></b></div>
+      <p id="msg" class="msg">Clean. Speeding up.</p>
+    </div>
+  </section>
+
+  <section id="waitlist" class="cta">
+    <h2>Be first to shred</h2>
+    <p>Drop your email and we will tell you when Lick Dude is ready.</p>
+    <form id="form" novalidate>
+      <input type="email" id="email" placeholder="you@example.com" required aria-label="Email address">
+      <button class="btn" type="submit">Notify me</button>
+    </form>
+    <p id="formmsg" class="fine" role="status"></p>
+  </section>
+</main>
+
+<footer>© <span id="yr"></span> Lick Dude. All rights reserved.</footer>
+<script src="main.js"></script>
+</body>
+</html>
